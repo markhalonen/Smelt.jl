@@ -14,7 +14,7 @@ function send(name::AbstractString, value::Number, api_key::AbstractString)
         ["Content-Type" => "application/json"], 
         JSON.json(Dict("api_key" => api_key,
                 "name" => name,
-                "value" => 14)))
+                "value" => value)))
 
     body = String(response.body)
     d = JSON.parse(body)
