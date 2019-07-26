@@ -12,12 +12,9 @@ end
 function send(name::AbstractString, value::Number, api_key::AbstractString)
     response = HTTP.post("https://secure-eyrie-26607.herokuapp.com/send", 
         ["Content-Type" => "application/json"], 
-        JSON.json(Dict(
-                "api_key" => api_key,
-                "name" => "Memory Usage",
-                "value" => 14
-                )
-    ))
+        JSON.json(Dict("api_key" => api_key,
+                "name" => name,
+                "value" => 14)))
 
     body = String(response.body)
     d = JSON.parse(body)
