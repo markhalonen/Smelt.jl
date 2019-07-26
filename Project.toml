@@ -1,0 +1,4 @@
+name = "Smelt"
+uuid = "59c6cd98-afc0-11e9-34e9-697f56bb7920"
+authors = ["Mark Halonen <halonen.mark@gmail.com>"]
+version = "0.1.0"
