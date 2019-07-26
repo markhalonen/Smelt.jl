@@ -13,7 +13,7 @@ function send(name::AbstractString, value::Number, api_key::AbstractString)
     response = HTTP.post("https://secure-eyrie-26607.herokuapp.com/send", 
         ["Content-Type" => "application/json"], 
         JSON.json(Dict(
-                "api_key" => "870b6d79-75e4-48f6-ad49-e4ab2771667f",
+                "api_key" => api_key,
                 "name" => "Memory Usage",
                 "value" => 14
                 )
